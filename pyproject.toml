@@ -1,13 +1,14 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "cifar-10-classifier"
 version = "0.0.1"
 description = "CIFAR-10 classifier"
 authors = [
-  { name = "EPITA" },
+  { "name": "Raphael Hatté" },
+  { "name": "Maui Tadeje" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
