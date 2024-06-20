@@ -54,4 +54,4 @@ MLRF Project: CIFAR-10 classifier.
 
 - Create a .venv using the requirements.txt
 - Use command 'make install'
-- Try the library using our notebooks
+- You can look at our demo.ipynb notebook to see how our library works
