@@ -1,13 +1,6 @@
-black
-flake8
-ipython
-isort
-jupyterlab
+joblib
 matplotlib
-notebook
 numpy
-pandas
-pip
-python-dotenv
+opencv-python
+scikit-image
 scikit-learn
--e .

@@ -4,10 +4,13 @@ MLRF Project: CIFAR-10 classifier.
 
 ## Project Organization
 
-```
+``` text
 ├── LICENSE            <- Open-source license if one is chosen
+│
 ├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
+│
 ├── README.md          <- The top-level README for developers using this project.
+│
 ├── data
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
@@ -35,24 +38,15 @@ MLRF Project: CIFAR-10 classifier.
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── cifar-10-classifier                <- Source code for use in this project.
-    │
-    ├── __init__.py    <- Makes cifar-10-classifier a Python module
-    │
-    ├── data           <- Scripts to download or generate data
-    │   └── make_dataset.py
-    │
-    ├── features       <- Scripts to turn raw data into features for modeling
-    │   └── build_features.py
-    │
-    ├── models         <- Scripts to train models and then use trained models to make
-    │   │                 predictions
-    │   ├── predict_model.py
-    │   └── train_model.py
-    │
-    └── visualization  <- Scripts to create exploratory and results oriented visualizations
-        └── visualize.py
+└── cifar10_classifier                <- Source code for use in this project.
 ```
 
 --------
 
+## Install
+
+`pip install dist/cifar-10-classifier.whl`
+
+## Commands
+
+`make example`

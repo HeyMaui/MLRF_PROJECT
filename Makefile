@@ -4,7 +4,7 @@
 
 PROJECT_NAME = mlrf_project
 PYTHON_VERSION = 3.10
-PYTHON_INTERPRETER = python
+PYTHON_INTERPRETER = python3
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -16,7 +16,17 @@ PYTHON_INTERPRETER = python
 requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
-	
+
+install: requirements
+	$(PYTHON_INTERPRETER) setup.py develop
+	$(PYTHON_INTERPRETER) setup.py sdist --format=zip
+	pip install dist/cifar10_classifier-1.0.0.zip
+
+
+clean-install:
+	pip uninstall -y cifar10_classifier
+	rm -rf dist
+	rm -rf cifar10_classifier.egg-info
 
 
 
@@ -46,7 +56,7 @@ format:
 create_environment:
 	@bash -c "if [ ! -z `which virtualenvwrapper.sh` ]; then source `which virtualenvwrapper.sh`; mkvirtualenv $(PROJECT_NAME) --python=$(PYTHON_INTERPRETER); else mkvirtualenv.bat $(PROJECT_NAME) --python=$(PYTHON_INTERPRETER); fi"
 	@echo ">>> New virtualenv created. Activate with:\nworkon $(PROJECT_NAME)"
-	
+
 
 
 
