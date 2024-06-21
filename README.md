@@ -44,11 +44,11 @@ MLRF Project: CIFAR-10 classifier.
 
 ## Install
 
-`pip install dist/cifar-10-classifier.whl`
-
 ## Commands
 
-`make install`
+`make install` to install the package
+
+`make clean-install` to uninstall the package
 
 ## Usage
 
